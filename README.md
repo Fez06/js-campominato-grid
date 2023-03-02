@@ -15,5 +15,5 @@ RISOLUZIONE:
 1-In html creo un bottone che andro' ad utilizzare su js in modo che quando viene schiacciato parte un ciclo for che produrra' 100 caselle numerate.
 2-per fare in modo che tutto agisca nel modo corretto creo una var che sara' il contenitore e che esiste gia' su html.
 3-poi creo una funzione con la quale posso creare ul elemento html, darle una classe, appenderla al contenitore e numerarla.
-4-creo quindi infine una condizione: se il bottone viene premuto si inneschera' il ciclo di for che usando le funzioni al suo interno produrra', numerera', dara' una classe e appendera' 100 caselle.
+4-creo quindi infine una condizione: se il bottone viene premuto si inneschera' il ciclo di for che usando le funzioni al suo interno produrra', numerera', dara' una classe e appendera' 100 caselle al container html.
 5-creo una funzione che fa comparire un messaggio in console e colora di azzurro la cella quando viene premuta e la richiamo con un addeventlistener.

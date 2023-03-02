@@ -55,11 +55,16 @@ const containerBoard = document.querySelector('.board');
 const start = document.getElementById('start');
 
 
+start.addEventListener('click', function() {
+
+    containerBoard.innerText = '';
+
+    for (let i = 1; i <= 100; i++) {
+        facTotum('div','cell', containerBoard, i);
+        
+    }
+})
 
 
 
-for (let i = 1; i <= 100; i++) {
-    facTotum('div','cell', containerBoard, i);
-    
-}
 
