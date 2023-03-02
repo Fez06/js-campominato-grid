@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header, footer {
+    background-color: coral;
+    padding: 1.875rem;
+}
+
+.board {
+    height: 31.25rem;
+    width: 31.25rem;
+    background-color: darksalmon;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cell {
+    border: 1px solid black;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
