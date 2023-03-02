@@ -29,4 +29,4 @@ containerBoard.append(casella);
 
 facTotum('p', 'cell');
 creaAppendi('p', containerBoard);
-assegnaClasse('')
+assegnaClasse('.cell', 'p');
