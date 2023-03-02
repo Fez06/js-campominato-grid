@@ -6,7 +6,9 @@
 function creaAppendi(htmlElement, containerElement) {
     const casella = document.createElement(htmlElement);
     containerElement.append(htmlElement);
+    return casella;
 }
+
 
 function assegnaClasse(classe, target) {
     target.classList.add(classe);
@@ -28,5 +30,6 @@ casella.classList.add('cell');
 containerBoard.append(casella);
 
 facTotum('p', 'cell');
-creaAppendi('p', containerBoard);
-assegnaClasse('.cell', 'p');
+const x = creaAppendi('p', containerBoard);
+assegnaClasse('.cell', x);
+
