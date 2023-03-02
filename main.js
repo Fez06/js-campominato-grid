@@ -44,9 +44,6 @@ function facTotum (htmlElement, cssClass, htmlContainer, valoreNumerazione) {
     boardCell.innerText = valoreNumerazione;
 }
 
-function count () {
-
-}
 
 
 
@@ -55,6 +52,11 @@ function count () {
 // // Main  //
 
 const containerBoard = document.querySelector('.board');
+const start = document.getElementById('start');
+
+
+
+
 
 for (let i = 1; i <= 100; i++) {
     facTotum('div','cell', containerBoard, i);
