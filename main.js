@@ -5,7 +5,7 @@
 
 // function creaAppendi(htmlElement, containerElement) {
 //     const casella = document.createElement(htmlElement);
-//     containerElement.append(htmlElement);
+//     containerElement.append(casella);
 //     return casella;
 // }
 
@@ -37,11 +37,17 @@
 
 // Funzioni //
 
-function facTotum (htmlElement, cssClass, htmlContainer) {
+function facTotum (htmlElement, cssClass, htmlContainer, valoreNumerazione) {
     const boardCell = document.createElement(htmlElement);
     boardCell.classList.add(cssClass);
     htmlContainer.append(boardCell);
+    boardCell.innerText = valoreNumerazione;
 }
+
+function count () {
+
+}
+
 
 
 
@@ -51,6 +57,7 @@ function facTotum (htmlElement, cssClass, htmlContainer) {
 const containerBoard = document.querySelector('.board');
 
 for (let i = 1; i <= 100; i++) {
-    facTotum('div','cell', containerBoard );
-    document.querySelector('cell').innerText = i;
+    facTotum('div','cell', containerBoard, i);
+    
 }
+
