@@ -42,9 +42,20 @@ function facTotum (htmlElement, cssClass, htmlContainer, valoreNumerazione) {
     boardCell.classList.add(cssClass);
     htmlContainer.append(boardCell);
     boardCell.innerText = valoreNumerazione;
+    return boardCell;
+}
+
+function eviStampa (target, cssClass, htmlValue) {
+    target.addEventListener('click', function(){
+    target.classList.add(cssClass);
+    console.log(htmlValue)
+ })
 }
 
 
+function assegnaClasse(classe, target) {
+    target.classList.add(classe);
+}
 
 
 
@@ -55,15 +66,27 @@ const containerBoard = document.querySelector('.board');
 const start = document.getElementById('start');
 
 
+
+
 start.addEventListener('click', function() {
 
     containerBoard.innerText = '';
 
     for (let i = 1; i <= 100; i++) {
-        facTotum('div','cell', containerBoard, i);
-        
+        let x = facTotum('div','cell', containerBoard, i);
+        //console.log(x);
+
+        eviStampa(x, 'highlight', i);
+    
     }
+    
 })
+
+
+
+// cella.addEventListener('click', function(){
+//     assegnaClasse('highlight', cella);
+// })
 
 
 

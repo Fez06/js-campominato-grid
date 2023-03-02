@@ -37,3 +37,7 @@ header, footer {
     width: calc(100% / 10);
     height: calc(100% / 10);
 }
+
+.highlight {
+    background-color: blueviolet;
+}
