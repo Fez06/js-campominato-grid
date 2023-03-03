@@ -28,6 +28,24 @@ header {
     justify-content: space-between;
 }
 
+.intestazione {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: auto;
+    height: 2.5rem;
+    margin-right: 1.25rem;
+}
+
+.bottoni {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+}
+
 .board {
     height: 31.25rem;
     width: 31.25rem;
