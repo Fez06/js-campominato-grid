@@ -58,6 +58,19 @@ function assegnaClasse(classe, target) {
 }
 
 
+function nCicli(inputDifficulty) {
+
+    if (inputDifficulty === 'easy') {
+        return 100;
+
+    } else if (inputDifficulty === 'medium') {
+        return 81;
+
+    } else return 49;
+}
+
+
+
 
 
 // // Main  //
@@ -65,28 +78,58 @@ function assegnaClasse(classe, target) {
 const containerBoard = document.querySelector('.board');
 const start = document.getElementById('start');
 
+//  Difficolta' //
+
+const difficulty = document.getElementById('difSelect');
 
 
 
-start.addEventListener('click', function() {
+start.addEventListener('click', function (){
 
     containerBoard.innerText = '';
+    const inputDifficulty = difficulty.value;
 
-    for (let i = 1; i <= 100; i++) {
-        let x = facTotum('div','cell', containerBoard, i);
-        //console.log(x);
+    let x = nCicli(inputDifficulty);
 
-        eviStampa(x, 'highlight', i);
+    for (let i = 1; i <= x; i++) {
+
+        let cella = facTotum('div','cell', containerBoard, i);
+        eviStampa(cella, 'highlight', i);
+
+        if (inputDifficulty === 'easy') {
+            assegnaClasse('cellEasy', cella);
+
+        } else if (inputDifficulty === 'medium') {
+            assegnaClasse('cellMedium', cella);
+
+        } else assegnaClasse('cellHard', cella);
     
     }
-    
 })
 
 
 
-// cella.addEventListener('click', function(){
-//     assegnaClasse('highlight', cella);
+
+// start.addEventListener('click', function() {
+
+//     containerBoard.innerText = '';
+
+//     for (let i = 1; i <= 100; i++) {
+//         let cella = facTotum('div','cellEasy', containerBoard, i);
+//         //console.log(x);
+
+//         eviStampa(cella, 'highlight', i);
+    
+//     }
+    
 // })
+
+
+
+
+
+
+
 
 
 

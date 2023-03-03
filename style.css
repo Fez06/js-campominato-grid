@@ -23,6 +23,11 @@ header, footer {
     padding: 1.875rem;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .board {
     height: 31.25rem;
     width: 31.25rem;
@@ -33,11 +38,24 @@ header, footer {
 }
 
 .cell {
-    border: 1px solid black;
-    width: calc(100% / 10);
-    height: calc(100% / 10);
+    border: 1px solid black; 
 }
 
 .highlight {
     background-color: blueviolet;
+}
+
+.cellEasy {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.cellMedium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.cellHard {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
